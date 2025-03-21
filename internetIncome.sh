@@ -650,7 +650,7 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       sudo docker pull packetshare/packetshare
     fi
-    if CONTAINER_ID=$(sudo docker run -d --name packetshare$UNIQUE_ID$i --restart=always $LOGS_PARAM $DNS_VOLUME $NETWORK_TUN castarsdk -key=cskKW0jGHpMXx4); then
+    if CONTAINER_ID=$(sudo docker run -d --name packetshare$UNIQUE_ID$i --restart=always $LOGS_PARAM $DNS_VOLUME $NETWORK_TUN castarsdk -key=cskdTdyT3wZXUE); then
       echo "$CONTAINER_ID" | tee -a $containers_file
       echo "packetshare$UNIQUE_ID$i" | tee -a $container_names_file
     else
